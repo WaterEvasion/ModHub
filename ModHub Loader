@@ -1,0 +1,426 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ModsHUB = Instance.new("ScreenGui")
+local KeyCheck = Instance.new("Frame")
+local AcceptBTN = Instance.new("TextButton")
+local Uicorner = Instance.new("UICorner")
+local KeyBox = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local Uicorner_2 = Instance.new("UICorner")
+local LdnTxt = Instance.new("TextLabel")
+local Right2FightMenu = Instance.new("Frame")
+local Uicorner_3 = Instance.new("UICorner")
+local Notice = Instance.new("TextLabel")
+local BorderSeperate = Instance.new("Frame")
+local Menu = Instance.new("Folder")
+local CustomStyles = Instance.new("TextButton")
+local MenuContents = Instance.new("Folder")
+local CustomStyles_2 = Instance.new("Frame")
+local Changeto = Instance.new("TextButton")
+local ChangeToSignal = Instance.new("TextLabel")
+local CustomChangeto = Instance.new("TextButton")
+local CustomSignal = Instance.new("TextLabel")
+local Apply = Instance.new("TextButton")
+local Disclaimer = Instance.new("TextLabel")
+
+--Properties:
+
+ModsHUB.Name = "ModsHUB"
+ModsHUB.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ModsHUB.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+KeyCheck.Name = "KeyCheck"
+KeyCheck.Parent = ModsHUB
+KeyCheck.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+KeyCheck.Position = UDim2.new(0.223542124, 0, 0.453061253, 0)
+KeyCheck.Size = UDim2.new(0.562637389, 0, 0.0938775539, 0)
+
+AcceptBTN.Name = "AcceptBTN"
+AcceptBTN.Parent = KeyCheck
+AcceptBTN.BackgroundColor3 = Color3.fromRGB(77, 255, 0)
+AcceptBTN.Position = UDim2.new(0.736328125, 0, 0.304347813, 0)
+AcceptBTN.Size = UDim2.new(0.125, 0, 0.369565219, 0)
+AcceptBTN.Font = Enum.Font.SourceSans
+AcceptBTN.Text = "Enter"
+AcceptBTN.TextColor3 = Color3.fromRGB(0, 0, 0)
+AcceptBTN.TextScaled = true
+AcceptBTN.TextSize = 14.000
+AcceptBTN.TextWrapped = true
+
+Uicorner.CornerRadius = UDim.new(2, 0)
+Uicorner.Name = "Uicorner"
+Uicorner.Parent = AcceptBTN
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = KeyCheck
+KeyBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.Position = UDim2.new(0.3046875, 0, 0.152173921, 0)
+KeyBox.Size = UDim2.new(0.390625, 0, 0.695652187, 0)
+KeyBox.Font = Enum.Font.SourceSans
+KeyBox.PlaceholderText = "Please enter the key."
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeyBox.TextScaled = true
+KeyBox.TextSize = 14.000
+KeyBox.TextWrapped = true
+
+TextLabel.Parent = KeyCheck
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.017578125, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.287109375, 0, 1, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Reminder: press (esc, b or /) to go into a mode that can let your mouse move anywhere that way you can enter your key."
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Uicorner_2.CornerRadius = UDim.new(2, 0)
+Uicorner_2.Name = "Uicorner"
+Uicorner_2.Parent = KeyCheck
+
+LdnTxt.Name = "LdnTxt"
+LdnTxt.Parent = KeyCheck
+LdnTxt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LdnTxt.BackgroundTransparency = 1.000
+LdnTxt.Position = UDim2.new(0.3046875, 0, 0, 0)
+LdnTxt.Size = UDim2.new(0.390625, 0, 1, 0)
+LdnTxt.Visible = false
+LdnTxt.Font = Enum.Font.SourceSans
+LdnTxt.TextColor3 = Color3.fromRGB(177, 177, 177)
+LdnTxt.TextScaled = true
+LdnTxt.TextSize = 14.000
+LdnTxt.TextWrapped = true
+
+Right2FightMenu.Name = "Right2FightMenu"
+Right2FightMenu.Parent = ModsHUB
+Right2FightMenu.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Right2FightMenu.Position = UDim2.new(0.212553114, 0, 0.238775551, 0)
+Right2FightMenu.Size = UDim2.new(0.57472527, 0, 0.520408332, 0)
+Right2FightMenu.Visible = false
+
+Uicorner_3.CornerRadius = UDim.new(0, 5)
+Uicorner_3.Name = "Uicorner"
+Uicorner_3.Parent = Right2FightMenu
+
+Notice.Name = "Notice"
+Notice.Parent = Right2FightMenu
+Notice.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notice.BackgroundTransparency = 1.000
+Notice.Position = UDim2.new(0.321223706, 0, -0.00392153766, 0)
+Notice.Size = UDim2.new(0.332695991, 0, 0.0823529139, 0)
+Notice.Font = Enum.Font.SourceSans
+Notice.Text = "I have gotten permission to put the styles here!"
+Notice.TextColor3 = Color3.fromRGB(255, 255, 255)
+Notice.TextScaled = true
+Notice.TextSize = 14.000
+Notice.TextWrapped = true
+
+BorderSeperate.Name = "BorderSeperate"
+BorderSeperate.Parent = Right2FightMenu
+BorderSeperate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BorderSeperate.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BorderSeperate.Position = UDim2.new(0.118546844, 0, -0.00392153766, 0)
+BorderSeperate.Size = UDim2.new(0, 0, 1.00392127, 0)
+
+Menu.Name = "Menu"
+Menu.Parent = Right2FightMenu
+
+CustomStyles.Name = "Custom Styles"
+CustomStyles.Parent = Menu
+CustomStyles.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+CustomStyles.BorderSizePixel = 0
+CustomStyles.Position = UDim2.new(0, 0, -0.00392153766, 0)
+CustomStyles.Size = UDim2.new(0.118546844, 0, 0.117647022, 0)
+CustomStyles.Font = Enum.Font.SourceSans
+CustomStyles.Text = "Custom Styles"
+CustomStyles.TextColor3 = Color3.fromRGB(0, 0, 0)
+CustomStyles.TextScaled = true
+CustomStyles.TextSize = 14.000
+CustomStyles.TextWrapped = true
+
+MenuContents.Name = "MenuContents"
+MenuContents.Parent = Right2FightMenu
+
+CustomStyles_2.Name = "CustomStyles"
+CustomStyles_2.Parent = MenuContents
+CustomStyles_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CustomStyles_2.BackgroundTransparency = 1.000
+CustomStyles_2.Position = UDim2.new(0.130019113, 0, 0.113725483, 0)
+CustomStyles_2.Size = UDim2.new(0.869980872, 0, 0.886274219, 0)
+CustomStyles_2.Visible = false
+
+Changeto.Name = "Changeto"
+Changeto.Parent = CustomStyles_2
+Changeto.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changeto.Position = UDim2.new(0.0747252777, 0, 0.0619469024, 0)
+Changeto.Size = UDim2.new(0.17582418, 0, 0.0575221255, 0)
+Changeto.Font = Enum.Font.SourceSans
+Changeto.Text = "Brawler"
+Changeto.TextColor3 = Color3.fromRGB(0, 0, 0)
+Changeto.TextScaled = true
+Changeto.TextSize = 14.000
+Changeto.TextWrapped = true
+
+ChangeToSignal.Name = "ChangeTo Signal"
+ChangeToSignal.Parent = CustomStyles_2
+ChangeToSignal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ChangeToSignal.Position = UDim2.new(0.305494517, 0, 0.0265486687, 0)
+ChangeToSignal.Size = UDim2.new(0.356043965, 0, 0.128318578, 0)
+ChangeToSignal.Font = Enum.Font.SourceSans
+ChangeToSignal.Text = "The Style you want to change to become the custom style"
+ChangeToSignal.TextColor3 = Color3.fromRGB(0, 0, 0)
+ChangeToSignal.TextScaled = true
+ChangeToSignal.TextSize = 14.000
+ChangeToSignal.TextWrapped = true
+
+CustomChangeto.Name = "CustomChangeto"
+CustomChangeto.Parent = CustomStyles_2
+CustomChangeto.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CustomChangeto.Position = UDim2.new(0.0747252777, 0, 0.238938048, 0)
+CustomChangeto.Size = UDim2.new(0.17582418, 0, 0.0575221255, 0)
+CustomChangeto.Font = Enum.Font.SourceSans
+CustomChangeto.Text = "Draganaga"
+CustomChangeto.TextColor3 = Color3.fromRGB(0, 0, 0)
+CustomChangeto.TextScaled = true
+CustomChangeto.TextSize = 14.000
+CustomChangeto.TextWrapped = true
+
+CustomSignal.Name = "Custom Signal"
+CustomSignal.Parent = CustomStyles_2
+CustomSignal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CustomSignal.Position = UDim2.new(0.305494517, 0, 0.203539819, 0)
+CustomSignal.Size = UDim2.new(0.356043965, 0, 0.128318578, 0)
+CustomSignal.Font = Enum.Font.SourceSans
+CustomSignal.Text = "The Custom Style you want to be"
+CustomSignal.TextColor3 = Color3.fromRGB(0, 0, 0)
+CustomSignal.TextScaled = true
+CustomSignal.TextSize = 14.000
+CustomSignal.TextWrapped = true
+
+Apply.Name = "Apply"
+Apply.Parent = CustomStyles_2
+Apply.BackgroundColor3 = Color3.fromRGB(27, 255, 2)
+Apply.Position = UDim2.new(0.145054951, 0, 0.495575219, 0)
+Apply.Size = UDim2.new(0.45714286, 0, 0.11061947, 0)
+Apply.Font = Enum.Font.SourceSans
+Apply.Text = "Apply"
+Apply.TextColor3 = Color3.fromRGB(0, 0, 0)
+Apply.TextScaled = true
+Apply.TextSize = 14.000
+Apply.TextWrapped = true
+
+Disclaimer.Name = "Disclaimer"
+Disclaimer.Parent = CustomStyles_2
+Disclaimer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Disclaimer.Position = UDim2.new(0.162637368, 0, 0.699115038, 0)
+Disclaimer.Size = UDim2.new(0.439560443, 0, 0.221238941, 0)
+Disclaimer.Font = Enum.Font.SourceSans
+Disclaimer.Text = "Disclaimer! Once you click Apply it will disappear and once it comes back it means it has loaded"
+Disclaimer.TextColor3 = Color3.fromRGB(0, 0, 0)
+Disclaimer.TextScaled = true
+Disclaimer.TextSize = 14.000
+Disclaimer.TextWrapped = true
+
+-- Scripts:
+
+local function APPRAI_fake_script() -- Uicorner. 
+	local script = Instance.new('Script', Uicorner)
+
+end
+coroutine.wrap(APPRAI_fake_script)()
+local function NRXA_fake_script() -- KeyCheck.LocalScript 
+	local script = Instance.new('LocalScript', KeyCheck)
+
+	local function KeyAccepted(val, key)
+		if val == true and key == "IH70SadUy6sdFTRM" then
+			script.Parent.LdnTxt.Visible = true
+			script.Parent.LdnTxt.Text = "Checking If Game Supported..."
+			task.wait(2)
+			if game.GameId == 3139902823 then
+				script.Parent.LdnTxt.Text = "Game Supported!"
+				task.wait(1)
+				script.Parent.LdnTxt.Text = "Loading Right 2 fight GUI"
+				task.wait(5)
+				script.Parent.Visible = false
+				script.Parent.Parent.Right2FightMenu.Visible = true
+			else
+				script.Parent.LdnTxt.Text = "Game Not Supported!"
+				task.wait(3)
+				script.Parent.Parent:Destroy()
+			end
+		end
+	end
+	
+	script.Parent.AcceptBTN.MouseButton1Down:Connect(function()
+		if script.Parent.KeyBox.Text == "IH70SadUy6sdFTRM" then
+			script.Parent.KeyBox.Text = "Correct Key!"
+			script.Parent.AcceptBTN.Visible = false
+			task.wait(1)
+			script.Parent.KeyBox.Visible = false
+			script.Parent.TextLabel.Visible = false
+			KeyAccepted(true, "IH70SadUy6sdFTRM")
+		else
+			script.Parent.KeyBox.Text = "Invalid Key!"
+		end
+	end)
+end
+coroutine.wrap(NRXA_fake_script)()
+local function SCMZFEG_fake_script() -- CustomStyles.LocalScript 
+	local script = Instance.new('LocalScript', CustomStyles)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.MenuContents.CustomStyles.Visible = true
+	end)
+end
+coroutine.wrap(SCMZFEG_fake_script)()
+local function XIKIJCE_fake_script() -- Changeto.LocalScript 
+	local script = Instance.new('LocalScript', Changeto)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		if script.Parent.Text == "Brawler" then
+			script.Parent.Text = "Rush" 
+		elseif script.Parent.Text == "Rush" then
+			script.Parent.Text = "Beast"
+		elseif script.Parent.Text == "Beast" then
+			script.Parent.Text = "Brawler" 
+		end
+	end)
+end
+coroutine.wrap(XIKIJCE_fake_script)()
+local function SPQIRDG_fake_script() -- CustomChangeto.LocalScript 
+	local script = Instance.new('LocalScript', CustomChangeto)
+
+	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja"}
+	local CurrentStyleNumber = 1
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if CurrentStyleNumber == 4 then
+			CurrentStyleNumber = 1
+		else
+			CurrentStyleNumber += 1
+		end
+		script.Parent.Text = AllCustomStyles[CurrentStyleNumber]
+	end)
+end
+coroutine.wrap(SPQIRDG_fake_script)()
+local function LYXH_fake_script() -- Apply.LocalScript 
+	local script = Instance.new('LocalScript', Apply)
+
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Visible = false
+		task.wait(3)
+		if script.Parent.Parent.CustomChangeto.Text == "nagaraja" then
+			local styleToChange = script.Parent.Parent.Changeto.Text
+			local styleToChangeTo = "नागराज"
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
+	
+				v:Destroy()
+	
+			end
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChangeTo):GetChildren()) do
+				v = v:Clone()
+				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
+	
+			end
+		elseif script.Parent.Parent.CustomChangeto.Text == "Dragon" then
+			local styleToChange = script.Parent.Parent.Changeto.Text
+			local styleToChangeTo = "堂島の龍"
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
+	
+				v:Destroy()
+	
+			end
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChangeTo):GetChildren()) do
+				v = v:Clone()
+				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
+	
+			end
+		elseif script.Parent.Parent.CustomChangeto.Text == "TigerLegend" then
+			local TigerBrawler = game:GetService("ReplicatedStorage").Styles["\224\164\168\224\164\190\224\164\151\224\164\176\224\164\190\224\164\156"]:Clone()
+			TigerBrawler.Name = "TigerBrawler"
+			TigerBrawler.Rush1.Value = "龍GTigerDrop"
+			TigerBrawler.Rush2.Value = "龍GTigerDrop"
+			TigerBrawler.Rush3.Value = "龍GTigerDrop"
+			TigerBrawler.Rush4.Value = "龍GTigerDrop"
+			TigerBrawler.Speed.Value = 1
+			TigerBrawler.Strike1.Value = "龍GTigerDrop"
+			TigerBrawler.VisualName.Value = "TIGERLEGEND"
+			TigerBrawler.Color.Value = Color3.new(0.876382, 0.441306, 0.086317)
+			TigerBrawler.Parent = game:GetService("ReplicatedStorage").Styles
+	
+	
+			local styleToChange = script.Parent.Parent.Changeto.Text
+			local styleToChangeTo = "TigerBrawler"
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
+	
+				v:Destroy()
+	
+			end
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChangeTo):GetChildren()) do
+				v = v:Clone()
+				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
+	
+			end
+		elseif script.Parent.Parent.CustomChangeto.Text == "Draganaga" then
+			local Draganaga = game:GetService("ReplicatedStorage").Styles["\224\164\168\224\164\190\224\164\151\224\164\176\224\164\190\224\164\156"]:Clone() 
+			Draganaga.Speed.Value = 1.5 
+			Draganaga.Color.Value = Color3.new(0.252422, 0.0934674, 1) 
+			Draganaga.Rush1.Value = "龍Attack1" 
+			Draganaga.Rush2.Value = "龍Attack2" 
+			Draganaga.Rush3.Value = "龍Attack3" 
+			Draganaga.Rush4.Value = "龍Attack4" 
+			Draganaga.VisualName.Value = "DRAGANAGA" 
+			Draganaga.Name = "DragonRush" 
+			Draganaga.Parent = game:GetService("ReplicatedStorage").Styles
+	
+	
+			local styleToChange = script.Parent.Parent.Changeto.Text
+			local styleToChangeTo = "DragonRush" 
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
+	
+				v:Destroy()
+	
+			end
+	
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChangeTo):GetChildren()) do
+				v = v:Clone()
+				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
+	
+			end
+		end
+		script.Parent.Visible = true
+	end)
+end
+coroutine.wrap(LYXH_fake_script)()
+local function TDPS_fake_script() -- MenuContents.Enable/Disable 
+	local script = Instance.new('LocalScript', MenuContents)
+
+	local UIS = game:GetService("UserInputService")
+	local OpenFrame = true
+	
+	UIS.InputBegan:Connect(function(input, gameProcessedEvent)
+		if input.KeyCode == Enum.KeyCode.RightControl then
+			if script.Parent.Parent.Visible == OpenFrame and script.Parent.Parent.Parent.KeyCheck.Visible == false then
+				if OpenFrame == false then
+					OpenFrame = true
+				else
+					OpenFrame = false
+				end
+				script.Parent.Parent.Visible = not script.Parent.Parent.Visible
+			end
+		end
+	end)
+end
+coroutine.wrap(TDPS_fake_script)()
