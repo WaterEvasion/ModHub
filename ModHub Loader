@@ -295,7 +295,7 @@ coroutine.wrap(XIKIJCE_fake_script)()
 local function SPQIRDG_fake_script() -- CustomChangeto.LocalScript 
 	local script = Instance.new('LocalScript', CustomChangeto)
 
-	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker"}
+	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker", "Parker"}
 	local CurrentStyleNumber = 1
 	
 	script.Parent.MouseButton1Down:Connect(function()
@@ -415,6 +415,39 @@ local function LYXH_fake_script() -- Apply.LocalScript
 
 			local styleToChange = script.Parent.Parent.Changeto.Text
 			local styleToChangeTo = "BloodSucker"
+
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
+
+				v:Destroy()
+
+			end
+
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChangeTo):GetChildren()) do
+				v = v:Clone()
+				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
+
+			end
+		elseif script.Parent.Parent.CustomChangeto.Text == "Parker" then
+			local Parker = game:GetService("ReplicatedStorage").Styles["Brawler"]:Clone()
+			Parker.Speed.Value = 1.5
+			Parker.Color.Value = Color3.new(0, 1, 0)
+			Parker.Rush1.Value = "RPunch1"
+			Parker.Rush2.Value = "RPunch2"
+			Parker.Rush3.Value = "RPunch3"
+			Parker.Rush4.Value = "RPunch2"
+			Parker.Strike2.Value = "BStrike2"
+			Parker.Strike3.Value = "BStrike3"
+			Parker.Strike4.Value = "BStrike4"
+			Parker.Strike5.Value = "BStrike5"
+			Parker.VisualName.Value = "Parker"
+			Parker.Name = "Parkerr"
+			Parker.Parent = game:GetService("ReplicatedStorage").Styles
+
+
+
+			Parker.Strike1.Value = "BStrike1"
+			local styleToChange = script.Parent.Parent.Changeto.Text
+			local styleToChangeTo = "Parkerr"
 
 			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
 
