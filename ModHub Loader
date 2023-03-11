@@ -1,6 +1,6 @@
 -- Gui to Lua
 -- Version: 3.2
---e
+
 -- Instances:
 
 local ModsHUB = Instance.new("ScreenGui")
@@ -241,7 +241,7 @@ local function NRXA_fake_script() -- KeyCheck.LocalScript
 			script.Parent.LdnTxt.Visible = true
 			script.Parent.LdnTxt.Text = "Checking If Game Supported..."
 			task.wait(2)
-			if game.GameId == 3139902823 then
+			if game.GameId == game.GameId then
 				script.Parent.LdnTxt.Text = "Game Supported!"
 				task.wait(1)
 				script.Parent.LdnTxt.Text = "Loading Right 2 fight GUI"
@@ -295,11 +295,11 @@ coroutine.wrap(XIKIJCE_fake_script)()
 local function SPQIRDG_fake_script() -- CustomChangeto.LocalScript 
 	local script = Instance.new('LocalScript', CustomChangeto)
 
-	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja"}
+	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker"}
 	local CurrentStyleNumber = 1
 	
 	script.Parent.MouseButton1Down:Connect(function()
-		if CurrentStyleNumber == 4 then
+		if CurrentStyleNumber == #AllCustomStyles then
 			CurrentStyleNumber = 1
 		else
 			CurrentStyleNumber += 1
@@ -398,6 +398,34 @@ local function LYXH_fake_script() -- Apply.LocalScript
 				v = v:Clone()
 				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
 	
+			end
+		elseif script.Parent.Parent.CustomChangeto.Text == "BloodSucker" then
+			local BSucker = game:GetService("ReplicatedStorage").Styles["\224\164\168\224\164\190\224\164\151\224\164\176\224\164\190\224\164\156"]:Clone()
+			BSucker.Speed.Value = 1.5
+			BSucker.Color.Value = Color3.new(1, 1, 0)
+			BSucker.Rush1.Value = "TFPunch1"
+			BSucker.Rush2.Value = "FPunch2"
+			BSucker.Rush3.Value = "FPunch1"
+			BSucker.Rush4.Value = "FPunch2"
+			BSucker.Rush4.Value = "FStrike3"
+			BSucker.VisualName.Value = "BloodSucker"
+			BSucker.Name = "BloodSucker"
+			BSucker.Parent = game:GetService("ReplicatedStorage").Styles
+
+
+			local styleToChange = script.Parent.Parent.Changeto.Text
+			local styleToChangeTo = "BloodSucker"
+
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
+
+				v:Destroy()
+
+			end
+
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChangeTo):GetChildren()) do
+				v = v:Clone()
+				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
+
 			end
 		end
 		script.Parent.Visible = true
