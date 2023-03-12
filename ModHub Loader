@@ -295,7 +295,7 @@ coroutine.wrap(XIKIJCE_fake_script)()
 local function SPQIRDG_fake_script() -- CustomChangeto.LocalScript 
 	local script = Instance.new('LocalScript', CustomChangeto)
 
-	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker", "Parker", "Vulcan"}
+	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker", "Vulcan"}
 	local CurrentStyleNumber = 1
 	
 	script.Parent.MouseButton1Down:Connect(function()
