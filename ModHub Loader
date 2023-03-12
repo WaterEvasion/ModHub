@@ -295,7 +295,7 @@ coroutine.wrap(XIKIJCE_fake_script)()
 local function SPQIRDG_fake_script() -- CustomChangeto.LocalScript 
 	local script = Instance.new('LocalScript', CustomChangeto)
 
-	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker", "Vulcan"}
+	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker", "Vulcan", "Derek"}
 	local CurrentStyleNumber = 1
 	
 	script.Parent.MouseButton1Down:Connect(function()
@@ -508,6 +508,35 @@ local function LYXH_fake_script() -- Apply.LocalScript
 				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
 
 			end
+		elseif script.Parent.Parent.CustomChangeto.Text == "Derek" then
+			local TigerBrawler = game:GetService("ReplicatedStorage").Styles["\224\164\168\224\164\190\224\164\151\224\164\176\224\164\190\224\164\156"]:Clone()
+			TigerBrawler.Name = "Derek"
+			TigerBrawler.Rush1.Value = "DerekPunch1"
+			TigerBrawler.Rush2.Value = "DerekSlam"
+			TigerBrawler.Rush3.Value = "DerekStomp"
+			TigerBrawler.Rush4.Value = "DerekPunch2"
+			TigerBrawler.Speed.Value = 1.5
+			TigerBrawler.Strike1.Value = "DerekCharge"
+			TigerBrawler.VisualName.Value = "Derek"
+			TigerBrawler.Color.Value = Color3.new(0.876382, 0.441306, 0.086317)
+			TigerBrawler.Parent = game:GetService("ReplicatedStorage").Styles
+
+
+			local styleToChange = script.Parent.Parent.Changeto.Text --Brawler = fisticuffs, Rush = frenzy, Beast = brute.  you MUST use one of these 3 or else you cannot use the custom style.
+			local styleToChangeTo = "Derek" --堂島の龍 is dragon style. you can find the styles at game.ReplicatedStorage.Styles
+
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
+
+				v:Destroy()
+
+			end
+
+			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChangeTo):GetChildren()) do
+				v = v:Clone()
+				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
+
+			end
+
 		end
 		script.Parent.Visible = true
 	end)
