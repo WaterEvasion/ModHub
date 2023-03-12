@@ -295,7 +295,7 @@ coroutine.wrap(XIKIJCE_fake_script)()
 local function SPQIRDG_fake_script() -- CustomChangeto.LocalScript 
 	local script = Instance.new('LocalScript', CustomChangeto)
 
-	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker", "Parker"}
+	local AllCustomStyles = {"Draganaga", "TigerLegend", "Dragon", "nagaraja", "BloodSucker", "Parker", "Vulcan"}
 	local CurrentStyleNumber = 1
 	
 	script.Parent.MouseButton1Down:Connect(function()
@@ -427,27 +427,75 @@ local function LYXH_fake_script() -- Apply.LocalScript
 				v.Parent = game.ReplicatedStorage.Styles[styleToChange]
 
 			end
-		elseif script.Parent.Parent.CustomChangeto.Text == "Parker" then
-			local Parker = game:GetService("ReplicatedStorage").Styles["Brawler"]:Clone()
-			Parker.Speed.Value = 1.5
-			Parker.Color.Value = Color3.new(0, 1, 0)
-			Parker.Rush1.Value = "RPunch1"
-			Parker.Rush2.Value = "RPunch2"
-			Parker.Rush3.Value = "RPunch3"
-			Parker.Rush4.Value = "RPunch2"
-			Parker.Strike2.Value = "BStrike2"
-			Parker.Strike3.Value = "BStrike3"
-			Parker.Strike4.Value = "BStrike4"
-			Parker.Strike5.Value = "BStrike5"
-			Parker.VisualName.Value = "Parker"
-			Parker.Name = "Parkerr"
-			Parker.Parent = game:GetService("ReplicatedStorage").Styles
+		elseif script.Parent.Parent.CustomChangeto.Text == "Vulcan" then
+			local Vulcan = game:GetService("ReplicatedStorage").Styles["Brawler"]:Clone()
+			Vulcan.Speed.Value = 1.5
+			Vulcan.Color.Value = Color3.new(0.5, 0, 0)
+			Vulcan.Rush1.Value = "BAttack1"
+			Vulcan.Rush2.Value = "BAttack2"
+			Vulcan.Rush3.Value = "BAttack3"
+			Vulcan.Rush4.Value = "BAttack2"
+			Vulcan.Strike2.Value = "BStrike2"
+			Vulcan.Strike3.Value = "BStrike2"
+			Vulcan.Strike4.Value = "BStrike3"
+
+			local Rush5 = Instance.new("StringValue")
+			Rush5.Name = "Rush5"
+			Rush5.Value = "BAttack1"
+			Rush5.Parent = Vulcan
+
+			local Rush6 = Instance.new("StringValue")
+			Rush6.Name = "Rush6"
+			Rush6.Value = "BAttack2"
+			Rush6.Parent = Vulcan
+
+			local Rush7 = Instance.new("StringValue")
+			Rush7.Name = "Rush7"
+			Rush7.Value = "BAttack3"
+			Rush7.Parent = Vulcan
+
+			local Rush8 = Instance.new("StringValue")
+			Rush8.Name = "Rush8"
+			Rush8.Value = "BAttack2"
+			Rush8.Parent = Vulcan
+
+			local Rush9 = Instance.new("StringValue")
+			Rush9.Name = "Rush9"
+			Rush9.Value = "BAttack1"
+			Rush9.Parent = Vulcan
+
+			local Strike5 = Instance.new("StringValue")
+			Strike5.Name = "Strike5"
+			Strike5.Value = "BStrike3"
+			Strike5.Parent = Vulcan
+
+			local Strike6 = Instance.new("StringValue")
+			Strike6.Name = "Strike6"
+			Strike6.Value = "BStrike4"
+			Strike6.Parent = Vulcan
+
+			local Strike7 = Instance.new("StringValue")
+			Strike7.Name = "Strike7"
+			Strike7.Value = "BStrike4"
+			Strike7.Parent = Vulcan
+
+			local Strike8 = Instance.new("StringValue")
+			Strike8.Name = "Strike8"
+			Strike8.Value = "BStrike5"
+			Strike8.Parent = Vulcan
+
+			local Strike9 = Instance.new("StringValue")
+			Strike9.Name = "Strike9"
+			Strike9.Value = "BStrike5"
+			Strike9.Parent = Vulcan
+
+			Vulcan.VisualName.Value = "Vulcan"
+			Vulcan.Name = "Vulcan"
+			Vulcan.Parent = game:GetService("ReplicatedStorage").Styles
 
 
-
-			Parker.Strike1.Value = "BStrike1"
-			local styleToChange = script.Parent.Parent.Changeto.Text
-			local styleToChangeTo = "Parkerr"
+			local styleToChange = "Brawler" --Brawler = fisticuffs, Rush = frenzy, Beast = brute.  you MUST use one of these 3 or else you cannot use the custom style.
+			local styleToChangeTo = "Vulcan" --堂島の龍 is dragon style. you can find the styles at game.ReplicatedStorage.Styles
 
 			for i, v in pairs(game.ReplicatedStorage.Styles:FindFirstChild(styleToChange):GetChildren()) do
 
